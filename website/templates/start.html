@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'glowna_style.css' %}">
+    
+    <title>Glowna</title>
+</head>
+<body>
+    <nav class="navbar" style="background-color: #bec6c3">
+        <img src="{% static 'images/banner.jpg' %}" alt="Logo tutaj">
+    </nav>
+    
+    <div class="container mycontainer">
+        <div class="row">
+            <div class="col mydiv">
+                <h5 class="text-center">Pomoc Drogowa</h5>
+                <p class="text-center">
+                    <a href="tel:+48730904703">
+                        <img class="phone_icon"src="{% static 'images/phone_icon.png'%}" alt="Phone icon missing">
+                    </a>
+                <br>Zadzwon lub wejdz na nasza strone</p>
+                <a class="text-center" href="{% url 'glowna_pomoc.html' %}">Zapraszamy</a>
+            </div>
+            <div class="col mydiv">
+                <h5 class="text-center">Centrum Uslug Finansowych</h5>
+                <p class="text-center"><a href="{% url 'glowna_fin.html' %}">Zapraszamy</a></p>
+            </div>
+        </div>
+    </div>
+
+    <nav class="navbar footer fixed-bottom" style="background-color: #bec6c3">
+            <a class="navbar-brand" href="{% url 'glowna_pomoc.html' %}">Logo firmy</a>
+            <div>
+                <p>FHU AMMAR, 12-200 Pisz, ul. Spacerowa 8</p>
+                <a href="tel:+48730904703">tel: +48730904703</a>
+                <a href="tel:+48517613104">tel: +48517613104</a>
+            </div>
+    
+        </nav>
+    </body>
+</html>

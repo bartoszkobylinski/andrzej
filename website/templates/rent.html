@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+{% extends 'base.html' %}
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="{% static 'cw.css' %}">
+    <title>Document</title>
+</head>
+<body>
+    {% block content %}
+    <h2>Wypozyczalnia samochodow</h2>
+    <h5>Oferujemy</h5>
+    <p>W ofercie mamy samochody osobowe. Czas wypożyczenia pojazdu nie jest ograniczony. </p>
+    <h5>Jak wynajac?</h5>
+    <p>W celu wynajęcia samochodu jako osoba prywatna bądź firma konieczne jest zarezerwowanie samochodu. Rezerwacji można dokonać dzwoniąc pod numer telefonu - 517 613 104. 
+    Istnieje możliwość podstawienia samochodu do miejsca wskazanego przez klienta np. hotelu, lotniska. - cena za usługę do uzgodnienia, uzależniona od ilości kilometrów od bazy.
+    Osoba wynajmująca musi posiadać ważny dowód osobisty, prawo jazdy oraz kartę kredytową. Na karcie kredytowej zostaję założona blokada w kwocie 1500 zł. Jeżeli wynajęty pojazd zostanie zwrócony z nowymi uszkodzeniami (powstałymi podczas wynajmu) Wypożyczający obciąży Pożyczającego kwotą udziału własnego w szkodzie 1500 zł. </p>
+    <h3>Wynajmujemy również samochody zastępcze osobom poszkodowanym.</h3>
+    <h4>SAMOCHÓD ZASTĘPCZY Z OC SPRAWCY ZA DARMO</h4>
+    <h4>MIAŁEŚ WYPADEK? KOLIZJĘ? KTOŚ USZKODZIŁ TWOJE AUTO? ZOSTAŁEŚ POZBAWIONY SAMOCHODU?</h4>
+    <p>Dobrze trafiłeś! Masz prawo do wynajęcia pojazdu zastępczego na koszt ubezpieczyciela z OC sprawcy od chwili zdarzenia do momentu naprawy Twojego auta lub wypłaty odszkodowania (w przypadku szkody całkowitej) przez firmę ubezpieczeniową. Auto zastępcze udostępniamy osobie poszkodowanej, która z powodu uszkodzenia własnego pojazdu nie może korzystać z niego korzystać w dotychczasowy sposób.Całość wynajmu regulowana będzie bezpośrednio z polisy OC sprawcy. Poszkodowany może wynająć w naszej firmie zastępczy środek transportu bez względu na to czy uszkodzony samochód wykorzystywany był do prowadzenia działalności gospodarczej czy też służył do celów prywatnych.</p>
+    <h4>JAK UZYSKAĆ AUTO ZASTĘPCZE?</h4>
+    <p>Zajmujemy się wszelkimi formalnościami związanymi z odzyskaniem środków z OC sprawcy wypadku. Do dyspozycji Klientów oddajemy szeroką gamę nowych i bogato wyposażonych samochodów, które zapewnią bezpieczeństwo i komfort zarówno w jeździe miejskiej jak i na dalekich trasach. Wszystkie samochody są ubezpieczone w pełnym pakiecie OC, AC, NNW z 24 godzinnym Assistance.</p>
+    {% endblock %}
+</body>
+</html>

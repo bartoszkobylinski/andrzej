@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+{% extends 'base.html' %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    {% block content %}
+
+    <div>
+        <form action="" method="post">
+            {% csrf_token %}
+            {{ form.as_table }}
+                <label for="name">Twoje imie</label>
+                <input type="text" name="name" id="name" value="{{ name }}">
+                <label for="surname">Twoje nazwisko</label>
+                <input type="text" name="surname" id="surname" value="{{ surname }}">
+                <label for="phone">Twoj numer telefonu</label>
+                <input type="tel" name="phone" id="phone" value="{{ phone }}">
+                <label for="email">Twoj email</label>
+                <input type="email" name="email" id="email" value="{{ email }}">
+                <label for="comment" name = "comment" id="comment" value = "{{ comment }}"></label>
+                <textarea name="comment" id="comment" cols="30" rows="10">Wiadomosc</textarea>
+                <input type="submit" value="OK">
+        </form>
+    </div>
+    
+    <div>
+        <h4>Kontakt</h4>
+        <h5>FHU AMMAR</h5>
+        <h5>Spacerowa 8</h5>
+        <h5>12-200 Pisz</h5>
+        <h5><a href="mailto:milena.michalska@gmail.com">milena.michalska@gmail.com</a></h5>
+        <h5>tel: 730 904 703</h5>
+        <h5>tel: 517 613 104</h5>
+    </div>
+   
+
+        
+    {% endblock %}
+    
+</body>
+</html>
