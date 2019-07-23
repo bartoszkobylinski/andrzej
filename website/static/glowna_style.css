@@ -1,12 +1,69 @@
-.mydiv{
-    padding: 10em;
-    background-color: #e0d7d3;
+html{
+    height: 100%;
+}
+body{
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    height: 100%;
+}
+.main_page{
+    position: relative;
+    height: 100vh;
+}
+.main_content{
+    padding-bottom: 2.5rem;
+}
+p{
+    text-decoration: none;
+}
+.main_header{
+    text-align: center;   
+    padding: 12px;
+    width: 100%;
+}
+.content{
+    padding: 24px 0;
+    margin: 48px 0;
+}
+.main_footer{
+    position: fixed;
+    bottom: 0;
+    
+}
+.main_footer > div{
+    text-align: right;
+}
+.copyright{
+    text-transform: uppercase;
+    color: black;
+    text-decoration: none
 }
 
-.phone_icon{
+#phone-icon{
     width: 50px;
     height: 50px;
 }
-body{
-    background-color: #fcdfce;
+.section{
+    display: inline-block;
+    width: 49%;
+    vertical-align: middle;
+    padding: 6px 6px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+#left{
+    transform: translate(20%);
+}
+#right {
+    transform: translate(-20%);
+}
+.a-tag__inner_div{
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+}
+.a-tag__inner_div:active,
+.a-tag__inner_div:hover{
+    color: grey;
 }

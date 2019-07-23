@@ -5,44 +5,40 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link href="{% static '/font_awesome/css/all.css' %}" rel="stylesheet">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="{% static ' ' %}">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'main.css' %}">
+    {% block styles %}
+    {% endblock %}
     <title>Document</title>
 </head>
 <body>
-        <nav class="navbar navbar-light bg-light" style="background-color: #524163">
-                <a href="#" class="navbar-brand">AMMAR</a>
-                        <ul class="nav">
-                                <li class="nav-item">
-                                    <a class="nav-link" href="{% url 'start.html' %}">Strona Glowna</a>
-                                </li>
-                                <li class="nav-item">
-                                        <a class="nav-link" href="{% url 'loan.html' %}">Kredyty Pozyczki</a>
-                                </li>
-                                <li class="nav-item">
-                                        <a class="nav-link" href="{% url 'insurance.html' %}">Ubezpieczenia</a>
-                                </li>
-                                <li class="nav-item">
-                                        <a class="nav-link" href="{% url 'szkoda.html' %}">Likwidacja szkod</a>
-                                </li>
-                                <li class="nav-item">
-                                        <a class="nav-link" href="{% url 'tax.html' %}">Zwrot podatku z zagranicy</a>
-                                </li>
-                                <li class="nav-item">
-                                        <a class="nav-link" href="{% url 'contact.html' %}">Kontakt</a>
-                                </li>
-                            </ul>
-        </nav>
+        <header class="main_header">
+                <div >
+                        <a class="main_header__brand" href="{% url 'start.html' %}">Logo tu</a>
+                </div>
+                <nav class="main_header_navigation_bar">
+                        <ul class="main_header_links">
+                                <li class="main_header__link"><a class="nav-link" href="{% url 'start.html' %}">Strona Główna</a></li>
+                                <li class="main_header__link"><a class="nav-link" href="{% url 'loan.html' %}">Kredyty Pożyczki</a></li>
+                                <li class="main_header__link"><a class="nav-link" href="{% url 'insurance.html' %}">Ubezpieczenia</a></li>
+                                <li class="main_header__link"><a class="nav-link" href="{% url 'szkoda.html' %}">Likwidacja szkód</a></li>
+                                <li class="main_header__link"><a class="nav-link" href="{% url 'tax.html' %}">Zwrot podatku z zagranicy</a></li>
+                                <li class="main_header__link"><a href="{% url 'contact.html'%}">Kontakt</a></li>
+                        </ul>
+                </nav>
+        </header>
             {% block content %}
             {% endblock %}
-        <nav class="navbar footer fixed-bottom" style="background-color: #bec6c3">
-            <a class="navbar-brand" href="{% url 'glowna_pomoc.html' %}">Logo firmy</a>
+
+        <footer class="main_footer">
                 <div>
-                    <p>FHU AMMAR, 12-200 Pisz, ul. Spacerowa 8</p>
-                    <a href="tel:+48730904703">tel: +48730904703</a>
-                    <a href="tel:+48517613104">tel: +48517613104</a>
+                        <a  class="main_footer__brand" href="{% url 'start.html' %}">Logo tu</a>
                 </div>
-        </nav>
+                <div>
+                        <p>FHU AMMAR, 12-200 Pisz, ul. Spacerowa 8</p>
+                        <a href="tel:+48730904703">tel: +48730904703</a>
+                        <a href="tel:+48517613104">tel: +48517613104</a>
+                </div>
+        </footer>
 </body>
 </html>

@@ -129,7 +129,4 @@ EMAIL_PORT = 587
 EMAIL_HOST_USER = 'bartosz.kobylinski@gmail.com'
 EMAIL_HOST_PASSWORD = 'Sk832xmax1'
 EMAIL_USE_TLS = True
-
-
-
-
+EASY_MAPS_GOOGLE_KEY = "AIzaSyDfkajjYZQW2HT5PHDJNOptZo4Stjmci8E"

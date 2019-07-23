@@ -1,17 +1,21 @@
 <!DOCTYPE html>
-{% extends 'base2.html'%}
+{% extends 'base2.html' %}
 {% load static %}
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    {% block styles %}
     <link rel="stylesheet" href="{% static 'test_style.css' %}">
+    {% endblock %}
     <title>Document</title>
 </head>
 <body>
     {% block content %}
+    <div class="main_content">
+
+    </div>
     <h2>Zapytaj o ubezpieczenie</h2>
 
 
@@ -47,39 +51,42 @@
            
         <form method="POST">
                 {% csrf_token %}
-                {{ form.as_p }}
-                <label for="name">Twoje imie</label>
+                {{ form }}
+                <!--
+                  <label for="name">Twoje imie</label>
                 <input type="text" name="name" id="name" value="{{ name }}">
                 <label for="surname">Twoje nazwisko</label>
                 <input type="text" name="surname" id="surname" value="{{ surname }}">
                 <label for="phone">Twoj numer telefonu</label>
                 <input type="tel" name="phone" id="phone" value="{{ phone }}">
                 <label for="email">Twoj email</label>
-                <input type="email" name="email" id="email" value="{{ email }}">
+                <input type="email" name="email" id="email" value="{{ email }}">  
+                -->
+                
             <input type="submit" value="Wyslij">
         </form>
     </div>
 <div class="container">
     <div class="row">
-        <div class="col-1 w-auto"><img src="{% static 'images/insurance/allianz.jpg' %}" alt="Allianz logo"></div>
-        <div class="col-1 w-auto"><img src="{% static 'images/insurance/aviva.jpg' %}" alt="Aviva logo"></div>
-        <div class="col-1 w-auto"><img src="{% static 'images/insurance/axa.jpg' %}" alt="Axa logo"></div>    
-        <div class="col-1 w-auto"><img src="{% static 'images/insurance/compensa.jpg' %}" alt="Compensa logo"></div>  
-        <div class="col-1 w-auto"><img src="{% static 'images/insurance/concordia.jpg' %}" alt="Concordia logo"></div>
-        <div class="col-1 w-auto"><img src="{% static 'images/insurance/ergohestia.jpg' %}" alt="Ergo Hestia logo"></div>
-        <div class="col-1 w-auto"><img src="{% static 'images/insurance/gefion.jpg' %}" alt="Gefion logo"></div>
-        <div class="col-1 w-auto"><img src="{% static 'images/insurance/generali.jpg' %}" alt="Generali logo"></div>
-        <div class="col-1 w-auto"><img src="{% static 'images/insurance/gothaer.jpg' %}" alt="Gothaer logo"></div>
-        <div class="col-1 w-auto"><img src="{% static 'images/insurance/inter.jpg' %}" alt="Inter logo"></div>
-        <div class="col-1 w-auto"><img src="{% static 'images/insurance/interrisk.jpg' %}" alt="Interrisk logo"></div>
-        <div class="col-1 w-auto"><img src="{% static 'images/insurance/lex-secure.jpg' %}" alt="Lex-secure logo"></div>
-    </div>
-    <div class="row">
+        <div class="col-1"><img src="{% static 'images/insurance/allianz.jpg' %}" alt="Allianz logo"></div>
+        <div class="col-1"><img src="{% static 'images/insurance/aviva.jpg' %}" alt="Aviva logo"></div>
+        <div class="col-1"><img src="{% static 'images/insurance/axa.jpg' %}" alt="Axa logo"></div>    
+        <div class="col-1"><img src="{% static 'images/insurance/compensa.jpg' %}" alt="Compensa logo"></div>  
+        <div class="col-1"><img src="{% static 'images/insurance/concordia.jpg' %}" alt="Concordia logo"></div>
+        <div class="col-1"><img src="{% static 'images/insurance/ergohestia.jpg' %}" alt="Ergo Hestia logo"></div>
+        <div class="col-1"><img src="{% static 'images/insurance/gefion.jpg' %}" alt="Gefion logo"></div>
+        <div class="col-1"><img src="{% static 'images/insurance/generali.jpg' %}" alt="Generali logo"></div>
+        <div class="col-1"><img src="{% static 'images/insurance/gothaer.jpg' %}" alt="Gothaer logo"></div>
+        <div class="col-1"><img src="{% static 'images/insurance/inter.jpg' %}" alt="Inter logo"></div>
+        <div class="col-1"><img src="{% static 'images/insurance/interrisk.jpg' %}" alt="Interrisk logo"></div>
+        <div class="col-1"><img src="{% static 'images/insurance/lex-secure.jpg' %}" alt="Lex-secure logo"></div>
         <div class="col-1"><img src="{% static 'images/insurance/link4.jpg' %}" alt="Link4 logo"></div>
         <div class="col-1"><img src="{% static 'images/insurance/lloyd.jpg' %}" alt="Lloyd logo"></div>
         <div class="col-1"><img src="{% static 'images/insurance/Macif.jpg' %}" alt="Macif logo"></div>
         <div class="col-1"><img src="{% static 'images/insurance/metlife.jpg' %}" alt="Metlife logo"></div>
-        <div class="col-1"><img src="{% static 'images/insurance/mtu.jpg' %}" alt="Mtu logo"></div>
+        
+    </div> 
+    <div class="row3">
         <div class="col-1"><img src="{% static 'images/insurance/polisa-zycie.jpg' %}" alt="Polise Zycie logo"></div>
         <div class="col-1"><img src="{% static 'images/insurance/pramerica.jpg' %}" alt="Pramerica logo"></div>
         <div class="col-1"><img src="{% static 'images/insurance/prevoir.jpg' %}" alt="Prevoir logo"></div>
@@ -87,19 +94,15 @@
         <div class="col-1"><img src="{% static 'images/insurance/pzu.jpg' %}" alt="Pzu logo"></div>
         <div class="col-1"><img src="{% static 'images/insurance/saltus.jpg' %}" alt="Saltus logo"></div>
         <div class="col-1"><img src="{% static 'images/insurance/starter24.jpg' %}" alt="starter24 logo"></div>
-    </div>
-    <div class="row">
         <div class="col-1"><img src="{% static 'images/insurance/tu-zdrowie.jpg' %}" alt="Tu zdrowie logo"></div>
         <div class="col-1"><img src="{% static 'images/insurance/tu.jpg' %}" alt="Tu logo"></div>
+        <div class="col-1"><img src="{% static 'images/insurance/mtu.jpg' %}" alt="Mtu logo"></div>
         <div class="col-1"><img src="{% static 'images/insurance/tuz.jpg' %}" alt="Tuz logo"></div>
         <div class="col-1"><img src="{% static 'images/insurance/warta.jpg' %}" alt="Warta logo"></div>
         <div class="col-1"><img src="{% static 'images/insurance/ycd.jpg' %}" alt="Ycd logo"></div>
+    
     </div>
 </div>    
-  
-   
-    
     {% endblock %}
-    
 </body>
 </html>

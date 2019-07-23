@@ -1,0 +1,46 @@
+body{
+    font-family: 'Montserrat', sans-serif;
+}
+
+.banner-container{
+    position: relative;
+    text-align: center;
+    margin: 6px;
+    padding: 6px;
+}
+.banner-container > img{
+    width: 50vw;
+    height: auto;
+}
+.content{
+    width: 100vw;
+    text-align: center;
+}
+.content-inner{
+    display: inline-block;
+    width: 75vw;
+    padding: 1.5em;
+}
+.content-inner > h3 {
+    text-align: center;
+    margin: 1em 0;
+}
+.list_of_services{
+    display: inline-block;
+    width: 75vw;
+    padding: 1em;
+}
+.list_of_services h3{
+    font-weight: bold;
+    display: inline;
+    text-align: center;
+}
+
+.list_of_services__list{
+    list-style: none;
+    font-weight: bold;
+}
+.list_of_services__point{
+    text-align: center;
+    font-size: 0.75em;
+}

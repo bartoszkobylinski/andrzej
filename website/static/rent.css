@@ -1,0 +1,91 @@
+.main-page{
+    width: 100vw;
+    display: inline-block;
+    text-align: center;
+}
+.main-content{
+    display: inline-block;
+    width: 75vw;
+    text-align: justify
+}
+.upper-content{
+    display: inline-block;
+    width: 100%;
+    padding: 1em;
+    margin: 1em;
+}
+.upper-content__picture{
+    float: left;
+    width: 20vw;
+    height: 20vw;
+    margin: 2em;
+}
+.picture_upper{
+    width: 100%;
+    height: auto;
+}
+.upper-content__text{
+    float: right;
+    width: 50vw;
+}
+.middle-content{
+    display: inline-block;
+    width: 100%;
+    padding: 1em;
+    margin: 1em;
+}
+.middle-content__picture{
+    float: right;
+    width: 20vw;
+    height: 20vw;
+    margin: 2em;
+}
+.middle-content__text{
+    float: left;
+    width: 50vw;
+}
+.middle_picture{
+    width: 100%;
+    height: auto;
+}
+.bottom-content{
+    display: inline-block;
+    width: 100%
+}
+.bottom-content__picture{
+    float: left;
+    width: 20vw;
+    height: 20vw;
+    margin: 2em;
+}
+.bottom-content__text{
+    float: right;
+    width: 50vw;
+}
+.bottom_picture{
+    width: 100%;
+    height: auto;
+}
+.span-center{
+    text-align: center;
+}
+.heading{
+    text-transform: uppercase;
+    border-bottom: 1px black solid;
+    font-weight: bold;
+    text-align: center;
+}
+.container-phone-link{
+    display: block;
+    text-align: center;
+    margin: 2px;
+}
+.phone-link{
+    font-weight: bold;
+    text-decoration: none;
+    color: white;
+    border-radius: 25px;
+    background: black;
+    padding: 5px;
+    font-size: 2em;
+}

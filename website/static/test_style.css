@@ -1,5 +1,21 @@
-img{
-    border: black 2px solid;
-    width: 8.25%;
-    height: 8.25%;
+.main_content{
+    display: inline-block;
+    text-align: center;
+
+}
+.row{
+    display: inline-block;
+}
+.row2{
+    display: inline-block;
+}
+.row3{
+    display: inline-block;
+}
+.col-1{
+    display: inline;
+}
+.col-1 > img{
+    width: 5%;
+    height: auto;
 }

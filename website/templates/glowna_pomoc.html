@@ -6,19 +6,39 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="{% static 'boot.css' %}">
-    <title>Document</title>
+    {% block styles %}
+    <link rel="stylesheet" href="{% static 'glowna_pomoc.css' %}">
+    {% endblock %}
+    <title>Strona główna Pomoc Drogowa Pisz</title>
 </head>
 <body>
         {% block content %}        
-        <div class="container" id="main">
-            <a href="tel:+78525689652"><img class="img-thumbnail text-center" src="{% static 'images/banner.jpg' %}" alt="Banner picture"></a>
-                <p id="main_p" class="text-justify">
-                        Brałeś udział w wypadku drogowym i Twój samochód nie nadaje się do jazdy? A może po prostu pojazd uległ awarii i nie chce odpalić? Nie martw się! Profesjonalna pomoc drogowa Ci w tym pomoże! Z nami sprawnie i szybko pozbędziesz się problemu. Nasza firma, to pomoc drogowa 24h w mieście Pisz i okolicach, dysponujemy nowoczesnym i najlepszym zapleczem technicznym, dzięki któremu jesteśmy w stanie wykonać wszystkie zlecone nam zdania. Zobacz, jak powinna funkcjonować pomoc drogowa w mieście Pisz, która profesjonalnie zajmie się Twoim zleceniem! Pracujemy z pasją do motoryzacji, dlatego tak ważne dla nas jest Twoje zadowolenie! Od samego początku działalności, stawiamy na satysfakcję Klientów oraz oferowanie wysokiej klasy usług. Nasza pomoc drogowa w mieście Pisz, to profesjonalne świadczenia, wykonywane przez najlepszych w branży fachowców. Dodatkowo, gwarantujemy bardzo atrakcyjny cennik naszych usług! Profesjonalna pomoc drogowa w Piszu? Nie ma lepszego rozwiązania niż nasza firma! Zaufało nam mnóstwo Klientów! Całodobowa pomoc drogowa w mieście Pisz – sprawdź, dlaczego warto wybrać naszą firmę!
-                </p>
-                <h3 class="text-center text-uppercase">Dysponujemy<br>nowoczesnym i dobrze wyposażonym sprzętem pomocy drogowej</h3>
+        <div class="main_section">
+                <div class="banner-container">
+                        <a class="banner" href="tel:+78525689652"><img src="{% static 'images/banner.jpg' %}" alt="Banner picture"></a>
+                </div>
+                <div class="content">
+                        <div class="content-inner">
+                                <p class="content-text">Brałeś udział w wypadku drogowym i Twój samochód nie nadaje się do jazdy? A może po prostu pojazd uległ awarii i nie chce odpalić? Nie martw się! Profesjonalna pomoc drogowa Ci w tym pomoże! Z nami sprawnie i szybko pozbędziesz się problemu. Nasza firma, to pomoc drogowa 24h w mieście Pisz i okolicach, dysponujemy nowoczesnym i najlepszym zapleczem technicznym, dzięki któremu jesteśmy w stanie wykonać wszystkie zlecone nam zdania. Zobacz, jak powinna funkcjonować pomoc drogowa w mieście Pisz, która profesjonalnie zajmie się Twoim zleceniem! Pracujemy z pasją do motoryzacji, dlatego tak ważne dla nas jest Twoje zadowolenie! Od samego początku działalności, stawiamy na satysfakcję Klientów oraz oferowanie wysokiej klasy usług. Nasza pomoc drogowa w mieście Pisz, to profesjonalne świadczenia, wykonywane przez najlepszych w branży fachowców. Dodatkowo, gwarantujemy bardzo atrakcyjny cennik naszych usług! Profesjonalna pomoc drogowa w Piszu? Nie ma lepszego rozwiązania niż nasza firma! Zaufało nam mnóstwo Klientów! Całodobowa pomoc drogowa w mieście Pisz – sprawdź, dlaczego warto wybrać naszą firmę!</p>
+                                <h3 >Dysponujemy nowoczesnym i dobrze wyposażonym sprzętem pomocy drogowej</h3>    
+                        </div>
+                        <div class="list_of_services">
+                                <h3>W ramach uslug oferujemy: </h3>
+                                <ul class="list_of_services__list">
+                                        <li class="list_of_services__point">pomoc drogową o każdej porze dnia i nocy</li>
+                                        <li class="list_of_services__point">drobne naprawy na drodze</li>
+                                        <li class="list_of_services__point">transport do warsztatu samochodowego</li>
+                                        <li class="list_of_services__point">dowóz paliwa</li>
+                                        <li class="list_of_services__point">wymianę kół</li>
+                                        <li class="list_of_services__point">odpalanie samochodu</li>
+                                        <li class="list_of_services__point">awaryjne otwieranie auta</li>
+                                        <li class="list_of_services__point">przewiezienie pojazdu w wyznaczone miejsce</li>
+                                        <li class="list_of_services__point">i inne....</li>
+                                </ul>
+                        </div>
+                </div>   
+                
         </div>
         {% endblock %}
 </body>

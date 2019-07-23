@@ -9,26 +9,24 @@
 </head>
 <body>
     {% block content %}
+    {% load easy_maps_tags %}
+    
+    
+    {% easy_map "Norway, Oslo, Filips gate 32" 300 400 %}
 
-    <div>
+
+
+    <div class="form">
         <form action="" method="post">
             {% csrf_token %}
-            {{ form.as_table }}
-                <label for="name">Twoje imie</label>
-                <input type="text" name="name" id="name" value="{{ name }}">
-                <label for="surname">Twoje nazwisko</label>
-                <input type="text" name="surname" id="surname" value="{{ surname }}">
-                <label for="phone">Twoj numer telefonu</label>
-                <input type="tel" name="phone" id="phone" value="{{ phone }}">
-                <label for="email">Twoj email</label>
-                <input type="email" name="email" id="email" value="{{ email }}">
-                <label for="comment" name = "comment" id="comment" value = "{{ comment }}"></label>
-                <textarea name="comment" id="comment" cols="30" rows="10">Wiadomosc</textarea>
-                <input type="submit" value="OK">
+            <p style="padding: 12px">
+                {{ form.as_ul }}
+            </p>
+            <input type="submit" value="OK" style="border: 5px solid black">
         </form>
     </div>
-    
-    <div>
+    <!--
+        <div class="contact_info">
         <h4>Kontakt</h4>
         <h5>FHU AMMAR</h5>
         <h5>Spacerowa 8</h5>
@@ -37,10 +35,14 @@
         <h5>tel: 730 904 703</h5>
         <h5>tel: 517 613 104</h5>
     </div>
+    -->
+    
    
 
         
     {% endblock %}
-    
+    <!--
+        <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false&amp;language=en&key=AIzaSyDfkajjYZQW2HT5PHDJNOptZo4Stjmci8E"></script>
+    -->    
 </body>
 </html>

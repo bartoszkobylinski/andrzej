@@ -19,12 +19,12 @@ from website.views import MyViewMain, MyViewContact, MyViewStart, MyViewRent, My
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('glowna_fin/', MyViewMain.as_view(), name = 'glowna_fin.html'),
+    path('glowna_fin', MyViewMain.as_view(), name = 'glowna_fin.html'),
     path('', MyViewStart.as_view(), name = 'start.html'),
     path('contact/', MyViewContact.as_view(), name = 'contact.html'),
-    path('rent/', MyViewRent.as_view(), name = 'rent.html'),
-    path('glowna_pomoc/', MyViewGlowna.as_view(), name = 'glowna_pomoc.html'),
-    path('loan/', MyViewLoan.as_view(), name = 'loan.html'),
+    path('rent', MyViewRent.as_view(), name = 'rent.html'),
+    path('glowna_pomoc', MyViewGlowna.as_view(), name = 'glowna_pomoc.html'),
+    path('loan', MyViewLoan.as_view(), name = 'loan.html'),
     path('tax', MyViewTax.as_view(), name = 'tax.html'),
     path('insurance', MyViewInsurance.as_view(), name = 'insurance.html'),
     path('szkoda',MyViewSzkoda.as_view(), name = 'szkoda.html')

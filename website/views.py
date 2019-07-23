@@ -18,20 +18,18 @@ class MyViewContact(View):
     def get(self,request):
         return render(request,'contact.html')
     def post(self, request):
-        if request.method == 'POST':
+        if request.method == 'post':
             form = ContactForm(request.POST)
             if form.is_valid():
-                subject = 'Formularz kontaktowy ze strony www.pomocdrogowa.pisz.pl nr'
-                text = 'ktos wlasnie wyslal do Ciebie formularz z zapytaniem o uslugi finansowe'
-                email_sender = 'bartosz.kobylinski@gmail.com'
-                email_reciver = ['bartosz.kobylinski@gmail.com']
-                send_mail(subject,
-                text,
-                email_sender,
-                email_reciver,
-                fail_silently=False,
-                )
-                return HttpResponseRedirect('glowna_pomoc')
+                name = form.cleaned_data['name']
+                surname = form.cleaned_data['surname']
+                phone = form.cleaned_data['phone']
+                email = form.cleaned_data['email']
+                subject = form.cleaned_data['subject']
+                comment = form.cleaned_data['comment']
+                recipients = ['bartosz.kobylinski@gmail.com']
+                send_mail(subject, comment, email, recipients,phone)
+                return HttpResponseRedirect('glowna_pomoc.html')
         else:
             form = InsuranceForm()
 
