@@ -1,7 +1,8 @@
 from django.shortcuts import render
 from django.http import HttpResponse, HttpResponseRedirect
 from django.views import View
-from .forms import InsuranceForm, ContactForm
+from website.forms import InsuranceForm, ContactForm, PostForm
+from website.models import ContactScheme, Post
 from django.core.mail import send_mail
 
 # Create your views here.
@@ -16,24 +17,25 @@ class MyViewStart(View):
 
 class MyViewContact(View):
     def get(self,request):
-        return render(request,'contact.html')
+        form = ContactForm()
+        return render(request,'contact.html',{'form':form})
     def post(self, request):
-        if request.method == 'post':
+        if request.method == 'POST':
             form = ContactForm(request.POST)
             if form.is_valid():
-                name = form.cleaned_data['name']
-                surname = form.cleaned_data['surname']
-                phone = form.cleaned_data['phone']
+                print(form['name'])
+                form.save()
                 email = form.cleaned_data['email']
                 subject = form.cleaned_data['subject']
                 comment = form.cleaned_data['comment']
                 recipients = ['bartosz.kobylinski@gmail.com']
-                send_mail(subject, comment, email, recipients,phone)
-                return HttpResponseRedirect('glowna_pomoc.html')
+                send_mail(subject,comment,email,recipients)
+                return HttpResponseRedirect('contact')
         else:
-            form = InsuranceForm()
+            form = ContactForm()
+            return render(request, 'contact.html',{'form':form})
 
-        return render(request, 'insurance.html', { 'form': form })
+        return render(request, 'contact.html', {'form': form})
 
 class MyViewRent(View):
     def get(self,request):
@@ -46,6 +48,16 @@ class MyViewGlowna(View):
 class MyViewLoan(View):
     def get(self,request):
         return render(request, 'loan.html')
+    def post(self,request):
+        if request.method == 'post':
+            form = PostForm(request.POST)
+            if form.is_valid:
+                text = form.cleaned_data['text']
+                form.save()
+            return HttpResponse('poszlo')
+        else:
+            form = PostForm
+        return render(request, 'loan.html', {'form':form})
 
 class MyViewTax(View):
     def get(self, request):

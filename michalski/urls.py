@@ -21,7 +21,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('glowna_fin', MyViewMain.as_view(), name = 'glowna_fin.html'),
     path('', MyViewStart.as_view(), name = 'start.html'),
-    path('contact/', MyViewContact.as_view(), name = 'contact.html'),
+    path('contact', MyViewContact.as_view(), name = 'contact.html'),
     path('rent', MyViewRent.as_view(), name = 'rent.html'),
     path('glowna_pomoc', MyViewGlowna.as_view(), name = 'glowna_pomoc.html'),
     path('loan', MyViewLoan.as_view(), name = 'loan.html'),

@@ -10,6 +10,14 @@
 </head>
 <body>
     {% block content %}
+
+    <p>boeutsnhoesnuha</p>
+
+    <form action="" method="post">
+        {% csrf_token%}
+        {{ form }}
+        <input type="submit" value="ok">
+    </form>
     {% endblock %}
 </body>
 </html>
