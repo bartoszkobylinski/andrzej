@@ -11,7 +11,26 @@
     <link rel="stylesheet" href="{% static 'mystyle.css'%}">
     
 </head>
-{% block content %}
+    {% block content %}
+        <h3>My Google Maps Demo</h3>
+            <!--The div element for the map -->
+            <div id="map" style="width: 400px; height: 400px; position: absolute; display: inline-block;">
+
+            </div>
+            <script>
+            // Initialize and add the map
+                function initMap() {
+            // The location of Uluru
+                var uluru = {lat: 53.435773, lng: 14.502642};
+            // The map, centered at Uluru
+                var map = new google.maps.Map(document.getElementById('map'), {zoom: 4, center: uluru});
+            // The marker, positioned at Uluru
+                var marker = new google.maps.Marker({position: uluru, map: map});
+                }
+    </script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDfkajjYZQW2HT5PHDJNOptZo4Stjmci8E&callback=initMap">
+    </script>
 
 {% endblock %}
 

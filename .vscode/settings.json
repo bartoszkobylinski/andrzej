@@ -1,3 +1,5 @@
 {
-    "python.pythonPath": "/home/bart/Venv/andrzej/bin/python"
+    "python.pythonPath": "C:\\Users\\Bart\\michal_site\\Scripts\\python.exe",
+    "python.linting.pylintEnabled": true,
+    "python.linting.enabled": true
 }

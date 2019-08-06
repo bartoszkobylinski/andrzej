@@ -40,8 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'website',
-    'easy_maps',
-    'phonenumber_field',
+    'osm_field',
 ]
 
 MIDDLEWARE = [
@@ -129,4 +128,3 @@ EMAIL_PORT = 587
 EMAIL_HOST_USER = 'bartosz.kobylinski@gmail.com'
 EMAIL_HOST_PASSWORD = 'Sk832xmax1'
 EMAIL_USE_TLS = True
-EASY_MAPS_GOOGLE_KEY = "AIzaSyDfkajjYZQW2HT5PHDJNOptZo4Stjmci8E"

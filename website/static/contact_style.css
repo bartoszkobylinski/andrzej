@@ -1,0 +1,52 @@
+.form-container{
+    display: block;
+    float: left;
+    /*border: 2px black solid;*/
+    margin: 20px;
+    width: 30vw;
+    height: 50vh;
+}
+.map-container{
+    display: block;
+    float: right;
+    /*border: 2px black solid;*/
+    width: 65vw;
+    height: 50vh;
+    padding-right: 50px;
+    margin-top:40px;
+}
+.contact-form{
+padding: 20px;
+margin: 20px;
+width: 100%;
+display: block;
+}
+form{
+    display: inline;
+}
+.comment{
+    border-radius: 5%;
+}
+label{
+
+    text-transform: uppercase;
+    font-size: 0.75em;
+}
+input, textarea {
+    border-radius: 5%;
+    margin: 10px;
+    border-bottom: 1px #bec0c2 solid;
+    border-left: none;
+    border-right: none;
+    border-top: none; 
+}
+#map{
+    height: 100%;  
+    position: relative;
+    overflow: hidden;
+}
+.button{
+    background: none;
+    border-bottom: 1px #bec0c2 solid;
+    text-transform: uppercase;
+}

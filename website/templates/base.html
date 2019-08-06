@@ -21,7 +21,12 @@
                                 <ul class="main_header_links">
                                         <li class="main_header__link"><a href="{% url 'start.html' %}">Strona Główna</a></li>
                                         <li class="main_header__link"><a href="{% url 'glowna_pomoc.html' %}">Pomoc Drogowa</a></li>
-                                        <li class="main_header__link"><a href="{% url 'rent.html' %}">Wypożyczalnia aut</a></li>
+                                        <li class="main_header__link"><a href="{% url 'rent.html' %}">Wypożyczalnia aut</a>
+                                                <ul class="main_header_dropdown_menu">
+                                                        <li class="main_header_dropdown_menu__link"><a href="{% url 'rent.html' %}">Wypożyczalnia aut</a>
+                                                        <li class="main_header_dropdown_menu__link"><a href="http://#">Rezerwacja</a></li>
+                                                </ul>
+                                        </li>
                                         <li class="main_header__link"><a href="{% url 'contact.html'%}">Kontakt</a></li>
                                 </ul>
                         </nav>
@@ -31,9 +36,9 @@
                 {% endblock %}
                 <footer class="main_footer">
                         <div class="main_footer__info">
-                                <p>FHU AMMAR, 12-200 Pisz, ul. Spacerowa 8</p>
-                                <a href="tel:+48730904703">tel: +48730904703</a>
-                                <a href="tel:+48517613104">tel: +48517613104</a>
+                                <p>Company name</p>
+                                <a href="tel:00245854202245">tel: +48730904703</a>
+                                <a href="tel:002458745545">tel: +48517613104</a>
                         </div>
                 </footer>        
         </div>

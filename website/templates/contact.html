@@ -1,21 +1,51 @@
 <!DOCTYPE html>
 {% extends 'base.html' %}
+{% load static %}
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    {% block styles %}
+    <link rel="stylesheet" href="{% static 'contact_style.css' %}">
+    {% endblock %}
+    <script type="text/javascript" src="//code.jquery.com/jquery-2.1.0.min.js"></script>
     <title>Document</title>
 </head>
 <body>
+  
     {% block content %}
-    
-        <form action="" method="post">
-                {% csrf_token %}
-                {{ form.as_p }}
-            <input type="submit" value="OK" style="border: 5px solid black">
-        </form>
-        
+        <div class="form-container">
+            <div class="contact-form">
+                <h3>Skontaktuj się z nami!</h3>
+                <form action="" method="post">
+                    {% csrf_token %}
+                    {{ form.as_p }}
+                    <input type="submit" value="Wyślij" class="button">
+                </form>
+            </div>
+        </div>
+            <!--The div element for the map -->
+            <div class="map-container">
+                <div id="map" >
+
+                </div>
+            </div>
+            
+            <script>
+            // Initialize and add the map
+                function initMap() {
+            // The location of Uluru
+                var spacerowa = {lat: 53.623411, lng: 21.820894};
+            // The map, centered at Uluru
+                var map = new google.maps.Map(document.getElementById('map'), {zoom: 18, center: spacerowa});
+            // The marker, positioned at Uluru
+                var marker = new google.maps.Marker({position: spacerowa, map: map});}
+    </script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDfkajjYZQW2HT5PHDJNOptZo4Stjmci8E&callback=initMap">
+    </script>
     {% endblock %}   
 </body>
 </html>

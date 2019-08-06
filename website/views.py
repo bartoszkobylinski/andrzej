@@ -1,15 +1,17 @@
 from django.shortcuts import render
 from django.http import HttpResponse, HttpResponseRedirect
+from django.views.generic.edit import CreateView
 from django.views import View
-from website.forms import InsuranceForm, ContactForm, PostForm
-from website.models import ContactScheme, Post
+from website.forms import InsuranceForm, ContactForm, PostForm, MyMapForm
+from website.models import ContactScheme, Post, MyMap
 from django.core.mail import send_mail
 
 # Create your views here.
 
 class MyViewMain(View):
+
     def get(self,request):
-        return render(request, 'glowna_fin.html')
+        return render(request, 'glowna_fin.html',{})
 
 class MyViewStart(View):
     def get(self,request):
@@ -30,10 +32,10 @@ class MyViewContact(View):
                 comment = form.cleaned_data['comment']
                 recipients = ['bartosz.kobylinski@gmail.com']
                 send_mail(subject,comment,email,recipients)
-                return HttpResponseRedirect('contact')
+                return HttpResponse('thank you!!!')
         else:
             form = ContactForm()
-            return render(request, 'contact.html',{'form':form})
+            return render(request, 'contact.html', {'form':form})
 
         return render(request, 'contact.html', {'form': form})
 
