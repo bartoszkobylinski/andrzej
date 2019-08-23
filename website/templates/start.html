@@ -8,40 +8,45 @@
     <link rel="stylesheet" href="{% static 'glowna_style.css' %}">
     <title>Glowna</title>
 </head>
-<body>
-    <div class="main_page">
-        <div class="main-content">
-            <header class="main_header">
-                <img class="banner" src="{% static 'images/banner.jpg' %}" alt="banner picture">
-            </header>
-            <div class="content">
-                <div class="section" id="left">
-                    <div class="title">
-                        <h3>Pomoc Drogowa</h3>  
-                    </div>    
-                    <div class="inner-div">
-                        <a class="a-tag__inner_div " id="call" href="tel:+48730904703"><img id="phone-icon" src="{% static 'images/phone_icon.png' %}" alt="phone icon"><br>Zadzwoń<br></a>
-                        <a class="a-tag__inner_div" href="{% url 'glowna_pomoc.html' %}">Przejdź do strony głównej</a>
-                    </div>
-                </div>
-                <div class="section" id="right">
-                    <div class="title" >
-                        <h3>Centrum Usług Finansowych</h3>
-                    </div>
-                    <div class="inner-div">
-                        <img src="{% static 'images/dollar_icon.png' %}" alt="dollar_icon">                
-                        <a class="a-tag__inner_div" href="{% url 'glowna_fin.html' %}"><br>Zapraszamy</a>
-                    </div>
-                </div>
-            </div>  
-        </div>
-        <footer class="main_footer">
-            <div>
-                <a class="copyright" href="http://">copyright &copy 2019 fhu ammar</a>
-            </div>
-        </footer>
-    </div>
-    
 
+<!--
+    style="background-image: url({% static 'images/man_orange.jpg' %}); background-repeat: no-repeat; background-position: top center; background-size: cover;"
+-->
+<body >
+   
+    <div class="main_page" >
+        <!-- div for wrapp all thing and make background color and set z-index with opacity -->
+        <div class="main_wrapper"> 
+        </div>
+                <div class="content">
+                    <div class="section" id="left">
+                        <div class="title">
+                            <h3>Pomoc Drogowa</h3>  
+                        </div>    
+                        <div class="inner-div">
+                            <a class="a-tag__inner_div " id="call" href="tel:+48730904703"><img id="phone-icon" src="{% static 'images/phone_icon.png' %}" alt="phone icon"><br>Zadzwoń<br></a>
+                            <a class="a-tag__inner_div" href="{% url 'glowna_pomoc.html' %}">Przejdź do strony głównej</a>
+                        </div>
+                    </div>
+                    <!--
+                        <div class="section" id="right">
+                        <div class="title" >
+                            <h3>Centrum Usług Finansowych</h3>
+                        </div>
+                        <div class="inner-div">
+                            <img src="{% static 'images/dollar_icon.png' %}" alt="dollar_icon">                
+                            <a class="a-tag__inner_div" href="{% url 'glowna_fin.html' %}"><br>Zapraszamy</a>
+                        </div>
+                    </div>  
+                    -->
+                </div>  
+                <footer class="main_footer">
+                <div>
+                    <a class="copyright" href="http://">copyright &copy 2019 fhu ammar</a>
+                </div>
+                </footer>
+            </div>
+        </div>
+    
 </body>
 </html>

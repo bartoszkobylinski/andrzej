@@ -1,23 +1,25 @@
 <!DOCTYPE html>
-{% extends 'base2.html' %}
+<!--
+   {% extends 'base2.html' %}  
+-->
 {% load static %}
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="{% static 'loan_style.css'%}">
     <title>Document</title>
 </head>
 <body>
-    {% block content %}
-
-    <p>boeutsnhoesnuha</p>
-
-    <form action="" method="post">
-        {% csrf_token%}
-        {{ form }}
-        <input type="submit" value="ok">
-    </form>
-    {% endblock %}
+    <div class="first_div">
+        oeuoeuoe
+    </div>
+    <div class="second_div">
+        eueouoeu
+    </div>
+    <div class="third_div">
+        oeuoeueou
+    </div>
 </body>
 </html>

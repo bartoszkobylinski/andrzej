@@ -2,8 +2,8 @@ from django.shortcuts import render
 from django.http import HttpResponse, HttpResponseRedirect
 from django.views.generic.edit import CreateView
 from django.views import View
-from website.forms import InsuranceForm, ContactForm, PostForm, MyMapForm
-from website.models import ContactScheme, Post, MyMap
+from website.forms import InsuranceForm, ContactForm, PostForm
+from website.models import ContactScheme, Post
 from django.core.mail import send_mail
 
 # Create your views here.
@@ -49,17 +49,7 @@ class MyViewGlowna(View):
 
 class MyViewLoan(View):
     def get(self,request):
-        return render(request, 'loan.html')
-    def post(self,request):
-        if request.method == 'post':
-            form = PostForm(request.POST)
-            if form.is_valid:
-                text = form.cleaned_data['text']
-                form.save()
-            return HttpResponse('poszlo')
-        else:
-            form = PostForm
-        return render(request, 'loan.html', {'form':form})
+        return render(request, 'loan.html',)
 
 class MyViewTax(View):
     def get(self, request):

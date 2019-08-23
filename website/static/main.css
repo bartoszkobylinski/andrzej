@@ -11,11 +11,11 @@ body {
     min-height: 100vh; /* will cover the 100% of viewport */
     display: block;
     position: relative;
-    padding-bottom: 30px; /* height  footer */
+    /*padding-bottom: 30px; /* height  footer */
 }
 .main_header{
     width: 100%;
-    background: white;
+    background: #f7b901;
     padding: 8px 16px;
     
 }
@@ -48,6 +48,7 @@ body {
     vertical-align: middle;
     /* border-left: 1px black solid;
     border-right: 1px black solid; */
+    width: calc(100% - 110px);
     margin-top: 5px 20px;
     padding: 3px 9px;
 
@@ -80,13 +81,20 @@ body {
 
 /* footer styling*/
 .main_footer{
-    position: absolute; 
+    /*position: absolute;*/ 
     bottom: 0;
-    background-color: whitesmoke;
+    background-color:#f7b901;
     width: 100%; 
     padding: 30px;
     border-top: 1px solid black;
+    color: black;
+    text-transform: uppercase;
 }
 .main_footer__info{
     display: inline-block;
+}
+.main_footer__info > a{
+    text-decoration: none;
+    padding: 0 20px;
+    color: black;
 }

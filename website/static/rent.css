@@ -1,3 +1,7 @@
+body{
+    color: white;
+    background:  linear-gradient(#424242, #313131);
+}
 .main-page{
     width: 100vw;
     display: inline-block;

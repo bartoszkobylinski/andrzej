@@ -1,5 +1,8 @@
 body{
     font-family: 'Montserrat', sans-serif;
+    color: white;
+    background:  linear-gradient(#424242, #313131);
+    
 }
 
 .banner-container{
@@ -14,7 +17,6 @@ body{
 }
 .content{
     width: 100vw;
-    text-align: center;
 }
 .content-inner{
     display: inline-block;
@@ -24,6 +26,9 @@ body{
 .content-inner > h3 {
     text-align: center;
     margin: 1em 0;
+}
+.content-text{
+    /*line-height: 2;*/
 }
 .list_of_services{
     display: inline-block;
@@ -41,6 +46,6 @@ body{
     font-weight: bold;
 }
 .list_of_services__point{
-    text-align: center;
-    font-size: 0.75em;
+    /*text-align: center;*/
+    font-size: 1.5em;
 }
