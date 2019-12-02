@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="{% static 'contact_style.css' %}">
     {% endblock %}
     <script type="text/javascript" src="//code.jquery.com/jquery-2.1.0.min.js"></script>
+    
     <title>Document</title>
 </head>
 <body>
@@ -43,8 +44,9 @@
             // The marker, positioned at Uluru
                 var marker = new google.maps.Marker({position: spacerowa, map: map});}
     </script>
+    <script type='text/javascript' src="{% static 'java_script/config.js' %}"></script>
     <script async defer
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDfkajjYZQW2HT5PHDJNOptZo4Stjmci8E&callback=initMap">
+    src="https://maps.googleapis.com/maps/api/js?key="+mykey+"&callback=initMap">
     </script>
     {% endblock %}   
 </body>

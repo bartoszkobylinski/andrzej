@@ -6,6 +6,7 @@ from website.forms import InsuranceForm, ContactForm, PostForm
 from website.models import ContactScheme, Post
 from django.core.mail import send_mail
 
+
 # Create your views here.
 
 class MyViewMain(View):
