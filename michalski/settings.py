@@ -125,5 +125,5 @@ STATIC_URL = '/static/'
 EMAIL_HOST ='smtp.gmail.com'
 EMAIL_PORT = 587
 EMAIL_HOST_USER = 'bartosz.kobylinski@gmail.com'
-EMAIL_HOST_PASSWORD = 'Sk832xmax1'
+EMAIL_HOST_PASSWORD = 'aaaaaaaaa'
 EMAIL_USE_TLS = True
